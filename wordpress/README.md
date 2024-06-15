@@ -7,7 +7,7 @@ Just my notes on setting up wordpress using containers.
 TODO
 
 
-## Compose 
+## Create compose file
 
 TODO: find wordpress container using nginx/php-fpm instead of apache/mod-php.
 
@@ -44,4 +44,12 @@ services:
       WORDPRESS_DB_HOST: db
     ports:
       - 8082:80
+```
+
+# Install
+
+Run podman-compose against file compose-file.yml starting the services and demonizing.
+
+```
+podman-compose -f componse-file.yml up -d
 ```
